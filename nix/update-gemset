@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+# update Gemfile.lock without installing
+nix-shell --run 'bundle lock'
+
+# update gemset.nix
+nix-shell --run 'bundix --gemset=nix/gemset.nix'
